@@ -8,6 +8,8 @@ $theme-color-map: (
   'Dark Violet': #9932CC #f5f4fa
 );
 
+@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+
 // TODO: allow to change that
 $main-colour: #c05b4d;
 $secondary-colour: #f8f5ec;
@@ -15,6 +17,8 @@ $body-width: 800px;
 $mobile-navbar-height: 50px !default;
 $code-colour: #c7254e;
 $code-font-family: Consolas, Monaco, Menlo, Consolas, monospace !default;
+$headline-font-family: 'Lato', sans-serif;
+$body-font-family: 'Open Sans', sans-serif;
 
 @mixin min-screen($min-width: $body-width) {
    @media screen and (min-width: $min-width) {
