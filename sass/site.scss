@@ -8,7 +8,7 @@ $theme-color-map: (
   'Dark Violet': #9932CC #f5f4fa
 );
 
-@import url('https://fonts.googleapis.com/css?family=Lato|Open+Sans');
+@import url('https://fonts.googleapis.com/css?family=Lato|Roboto+Slab:300,400');
 
 // TODO: allow to change that
 $main-colour: #c05b4d;
@@ -18,7 +18,7 @@ $mobile-navbar-height: 50px !default;
 $code-colour: #c7254e;
 $code-font-family: Consolas, Monaco, Menlo, Consolas, monospace !default;
 $headline-font-family: 'Lato', sans-serif;
-$body-font-family: 'Open Sans', sans-serif;
+$body-font-family: 'Roboto Slab', serif;
 
 @mixin min-screen($min-width: $body-width) {
    @media screen and (min-width: $min-width) {
