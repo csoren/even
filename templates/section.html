@@ -1,0 +1,12 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="post">
+        {{ section.content | safe }}
+        {% for page in section.pages %}
+            <p>
+                <a href="/{{ page.path }}">{{ page.title }}</a> - {{ page.description }}
+            </p>
+        {% endfor %}
+    </div>
+{% endblock content %}

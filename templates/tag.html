@@ -5,7 +5,11 @@
         <h2>{{ tag.name }}</h2>
         {% for page in tag.pages %}
             <div class="taxonomy__item">
-                <span class="taxonomy__item__time">{{ page.date | date(format="%F") }}</span>
+                <span class="taxonomy__item__time">
+                    {% if page.date %}
+                        {{ page.date | date(format="%F") }}
+                    {% endif %}
+                </span>
                 <span class="taxonomy__item__title">
                     <a href="{{ page.permalink }}">{{ page.title }}</a>
                 </span>

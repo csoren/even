@@ -1,0 +1,38 @@
+{% extends "index.html" %}
+
+{% block content %}
+
+<article class="post">
+    <header class="post__header">
+        <h1 class="post__title">
+            <a href="{{ page.permalink }}">{{ page.title }}</a>
+        </h1>
+        <div>
+            <strong>Summary:</strong> {{ page.extra["summary"] }}<br>
+            <strong>Platform:</strong> {{ page.extra["platform"] }}<br>
+            <strong>License:</strong> {{ page.extra["license"] }}<br>
+        </div>
+        </header>
+    <hr/>
+    <div>
+        {{ page.content | safe }}
+    </div>
+
+    {% block page_before_footer %}
+    {% endblock page_before_footer %}
+
+    <div class="post-footer">
+        {% block page_footer %}
+            {% if page.tags %}
+                <div class="post-tags">
+                    {% for tag in page.tags %}
+                        <a href="{{ get_taxonomy_url(kind="tag", name=tag) }}">#{{ tag }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endblock page_footer %}
+    </div>
+</article>
+
+{% endblock content %}
+
